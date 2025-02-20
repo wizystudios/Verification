@@ -33,11 +33,12 @@
 
         /* Logo (Fixed Size 30px x 30px) */
         .logo img {
-            width: 10px;
-            height: 10px;
+            width: 30px;
+            height: 30px;
             object-fit: contain;
         }
-                .logo-text {
+
+        .logo-text {
             font-size: 20px;
             font-weight: bold;
             color: white;
@@ -179,6 +180,22 @@
                 text-align: center;
             }
 
+            .logo-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 10px;
+            }
+
+            .logo img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .logo-text {
+                margin-top: 10px;
+            }
+
             .nav {
                 flex-direction: column;
                 margin-top: 10px;
@@ -193,27 +210,14 @@
 <body>
 
     <!-- Header -->
-   <!-- Header -->
-<div class="header">
-    <div class="logo-container">
-        <img src="EoA.png" alt="Elite Offshore Academy Logo">
-        <span class="logo-text">Elite Offshore Academy</span>
+    <div class="header">
+        <div class="logo-container">
+            <img src="EoA.png" alt="Elite Offshore Academy Logo" class="logo">
+            <span class="logo-text">Elite Offshore Academy</span>
+        </div>
     </div>
-    <div class="nav">
-        <a href="#">Home</a>
-        <a href="#">Verify Certificate</a>
-        <a href="#">About</a>
-        <a href="#">More</a>
-        <a href="#">Log In</a>
-    </div>
-</div>
 
-
-</body>
-</html>
-
-
-  <!-- Certificate Section -->
+    <!-- Certificate Section -->
     <div class="container">
         <div class="certificate-box">
             <table>
