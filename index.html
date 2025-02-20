@@ -19,7 +19,8 @@
         }
 
         /* Header */
-        .header {
+    
+.header {
     background-color: #1f2d4d;
     padding: 15px 20px;
     display: flex;
@@ -30,17 +31,25 @@
     box-sizing: border-box;
 }
 
-        /* Logo (Fixed Size 30px x 30px) */
-        .logo img {
-            width: 10px;
-            height: 10px;
-            object-fit: contain;
-        }
-                .logo-text {
-            font-size: 20px;
-            font-weight: bold;
-            color: white;
-        }
+/* Adjusted Logo */
+.logo-container {
+    display: flex;
+    align-items: center; /* Align logo image and text in the same row */
+    gap: 10px; /* Space between image and text */
+}
+
+.logo img {
+    width: 50px; /* Increase logo size */
+    height: 50px;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
 
         .nav {
             display: flex;
