@@ -33,16 +33,21 @@
 
         /* Logo (Fixed Size 30px x 30px) */
         .logo img {
-            width: 30px;
-            height: 30px;
+            width: 50px;
+            height: 50px;
             object-fit: contain;
         }
 
         .logo-text {
-            font-size: 20px;
+            font-size: 24px; /* Increased font size */
             font-weight: bold;
             color: white;
             white-space: nowrap;
+        }
+
+        .logo-text span {
+            display: block; /* Break "Academy" to the next line */
+            font-size: 20px; /* Slightly smaller for "Academy" */
         }
 
         .nav {
@@ -69,7 +74,7 @@
         }
 
         .certificate-box table {
-            width: 80%;
+            width: 100%; /* Make tables equal width */
             border-collapse: collapse;
             height: 13%;
             margin: auto;
@@ -193,7 +198,11 @@
             }
 
             .logo-text {
-                margin-top: 10px;
+                font-size: 28px; /* Larger font size for mobile */
+            }
+
+            .logo-text span {
+                font-size: 24px; /* Larger font size for mobile */
             }
 
             .nav {
@@ -213,7 +222,9 @@
     <div class="header">
         <div class="logo-container">
             <img src="EoA.png" alt="Elite Offshore Academy Logo" class="logo">
-            <span class="logo-text">Elite Offshore Academy</span>
+            <div class="logo-text">
+                Elite Offshore<br><span>Academy</span> <!-- Break "Academy" to the next line -->
+            </div>
         </div>
     </div>
 
