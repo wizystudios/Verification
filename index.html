@@ -5,17 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elite Offshore Academy - Certificate Verification</title>
     
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="eoa.png">
-
     <style>
-        /* General Styles */
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: white;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
             text-align: center;
-            color: white;
+            color: #333;
         }
 
         /* Header */
@@ -28,72 +25,75 @@
             flex-wrap: wrap;
         }
 
-        /* Logo (Fixed Size 30px x 30px) */
-        .logo img {
-            width: 10px;
-            height: 10px;
-            object-fit: contain;
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
         }
 
         .nav {
             display: flex;
-            gap: 15px;
+            gap: 20px;
         }
 
         .nav a {
             color: white;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s;
         }
 
-        /* Certificate Box */
+        .nav a:hover {
+            color: #ffd700;
+        }
+
+        /* Certificate Section */
         .container {
             margin: 50px auto;
-            width: 80%;
+            width: 90%;
             max-width: 800px;
-        }
-
-        .certificate-box {
-            padding: 25px;
-            border-radius: 4px;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .certificate-box table {
-            width: 80%;
+            width: 100%;
             border-collapse: collapse;
-            height: 125%;
-            margin: auto;
+        }
+
+        .certificate-box th, .certificate-box td {
+            padding: 16px;
+            border: 1px solid #ddd;
         }
 
         .certificate-box th {
-            padding: 16px;
-            text-align: center;
             background-color: #4c6aab;
             color: white;
         }
 
         .certificate-box td {
-            padding: 16px;
-            text-align: center;
-            background-color: #1f2d4d;
-            color: white;
+            background-color: #f8f9fa;
+            color: #333;
             font-weight: bold;
         }
 
-        .certificate-box .details {
-            background-color: #b0c4de;
-            color: white;
-            font-weight: bold;
-        }
-
-        .gap {
-            height: 20px;
-        }
-
-        /* Verified Text */
         .verified {
             margin-top: 20px;
-            font-size: 32px;
+            font-size: 24px;
             font-weight: bold;
             color: #4c6aab;
         }
@@ -111,14 +111,13 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            transition: transform 0.2s ease-in-out;
+            transition: transform 0.2s;
         }
 
         .chat-icon:hover {
             transform: scale(1.1);
         }
 
-        /* Chat Pop-up */
         .chat-popup {
             position: fixed;
             bottom: 80px;
@@ -126,7 +125,6 @@
             width: 300px;
             background: #1f2d4d;
             border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
             display: none;
             color: white;
         }
@@ -157,13 +155,13 @@
         /* Footer */
         .footer {
             background-color: #334a72;
-            padding: 50px;
-            font-size: 16px;
+            padding: 20px;
+            font-size: 14px;
             margin-top: 40px;
             color: white;
         }
 
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 768px) {
             .header {
                 flex-direction: column;
@@ -172,39 +170,27 @@
 
             .nav {
                 flex-direction: column;
+                gap: 10px;
                 margin-top: 10px;
-            }
-
-            .certificate-box {
-                padding: 20px;
             }
         }
     </style>
 </head>
 <body>
-
-    <!-- Header -->
-   <!-- Header -->
-<div class="header">
-    <div class="logo-container">
-        <img src="EoA.png" alt="Elite Offshore Academy Logo">
-        <span class="logo-text">Elite Offshore Academy</span>
+    <div class="header">
+        <div class="logo-container">
+            <img src="EoA.png" alt="Elite Offshore Academy Logo">
+            <span class="logo-text">Elite Offshore Academy</span>
+        </div>
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">Verify Certificate</a>
+            <a href="#">About</a>
+            <a href="#">More</a>
+            <a href="#">Log In</a>
+        </div>
     </div>
-    <div class="nav">
-        <a href="#">Home</a>
-        <a href="#">Verify Certificate</a>
-        <a href="#">About</a>
-        <a href="#">More</a>
-        <a href="#">Log In</a>
-    </div>
-</div>
 
-
-</body>
-</html>
-
-
-  <!-- Certificate Section -->
     <div class="container">
         <div class="certificate-box">
             <table>
@@ -212,24 +198,18 @@
                 <tr><td>EOA-NB042738UW7487Z</td><td>Haitham Suleiman Khalef</td></tr>
             </table>
 
-            <div class="gap"></div> <!-- Spacing -->
-
             <table>
                 <tr><th>Date of Birth</th><th>Issue Date</th></tr>
-                <tr><td class="details">09.11.1994</td><td class="details">27-01-2025</td></tr>
+                <tr><td>09.11.1994</td><td>27-01-2025</td></tr>
             </table>
         </div>
-
-        <div class="verified">Verified</div> <!-- Sentence case & light blue color -->
-
+        <div class="verified">Verified</div>
     </div>
 
-    <!-- Chat Icon -->
     <div class="chat-icon" onclick="toggleChat()">
         <img src="eoa.png" alt="Chat" width="30">
     </div>
 
-    <!-- Chat Pop-up -->
     <div class="chat-popup" id="chatBox">
         <div class="chat-header">
             <span>Chat Support</span>
@@ -238,16 +218,12 @@
         <div class="chat-body">Hello! How can we help you?</div>
     </div>
 
-    <!-- Footer -->
-    <div class="footer">
-        Copyright © 2025 Elite Offshore Academy. All rights reserved.
-    </div>
+    <div class="footer">Copyright © 2025 Elite Offshore Academy. All rights reserved.</div>
 
     <script>
         function toggleChat() {
             document.getElementById("chatBox").classList.toggle("active");
         }
     </script>
-
 </body>
 </html>
