@@ -5,15 +5,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elite Offshore Academy - Certificate Verification</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="EoA.png">
 
     <style>
- /* General Styles */
+        /* General Styles */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -30,95 +29,26 @@
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
-            width: 100%;
-            box-sizing: border-box;
         }
 
-        /* Logo */
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
+        /* Logo (Fixed Size 30px x 30px) */
         .logo img {
-            width: 50px;
-            height: 50px;
+            width: 10px;
+            height: 10px;
             object-fit: contain;
         }
 
-        .logo-text {
-            font-size: 20px;
-            font-weight: bold;
-            color: white;
-            white-space: nowrap;
-        }
-
-        /* Navigation */
         .nav {
             display: flex;
-            gap: 30px;
-            flex-grow: 1;
-            justify-content: center;
+            gap: 15px;
         }
 
         .nav a {
             color: white;
             text-decoration: none;
             font-size: 14px;
-            position: relative;
-            padding: 10px 15px;
-            transition: color 0.3s ease-in-out;
         }
 
-        /* Hover Effect: Make Link Span */
-        .nav a::after {
-            content: "";
-            display: block;
-            height: 2px;
-            background: white;
-            width: 0;
-            transition: width 0.3s ease-in-out;
-        }
-
-        .nav a:hover::after {
-            width: 100%;
-        }
-
-        .nav a:hover {
-            color: #f0a500;
-        }
-
-        /* Log In Button (Extend to the Right) */
-        .login {
-            margin-left: auto;
-            padding: 8px 20px;
-            background-color: #f0a500;
-            border-radius: 5px;
-            transition: background 0.3s ease-in-out;
-        }
-
-        .login:hover {
-            background-color: #d18b00;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .header {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .nav {
-                flex-direction: column;
-                margin-top: 10px;
-            }
-
-            .login {
-                width: 100%;
-                text-align: center;
-                margin-left: 0;
-            }
         /* Certificate Box */
         .container {
             margin: 50px auto;
@@ -258,24 +188,25 @@
 
     <!-- Header -->
    <!-- Header -->
-<div class="header container-fluid d-flex align-items-center justify-content-between px-3 py-2">
-    <div class="logo-container d-flex align-items-center">
-        <img src="EoA.png" alt="Elite Offshore Academy Logo" class="me-2" width="50" height="50">
+<div class="header">
+    <div class="logo-container">
+        <img src="EoA.png" alt="Elite Offshore Academy Logo">
         <span class="logo-text">Elite Offshore Academy</span>
     </div>
-    <nav class="nav d-flex flex-wrap justify-content-center">
-        <a href="#" class="px-3 text-white">Home</a>
-        <a href="#" class="px-3 text-white">Verify Certificate</a>
-        <a href="#" class="px-3 text-white">About</a>
-        <a href="#" class="px-3 text-white">More</a>
-        <a href="#" class="px-3 login text-white">Log In</a>
-    </nav>
+    <div class="nav">
+        <a href="#">Home</a>
+        <a href="#">Verify Certificate</a>
+        <a href="#">About</a>
+        <a href="#">More</a>
+        <a href="#">Log In</a>
+    </div>
 </div>
-
 
 
 </body>
 </html>
+
+
   <!-- Certificate Section -->
     <div class="container">
         <div class="certificate-box">
@@ -314,9 +245,6 @@
     <div class="footer">
         Copyright © 2025 Elite Offshore Academy. All rights reserved.
     </div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
 
     <script>
         function toggleChat() {
