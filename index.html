@@ -8,7 +8,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="eoa.png">
 
- <style>
+  <style>
         /* General Styles */
         body {
             margin: 0;
@@ -53,10 +53,9 @@
         /* Navigation */
         .nav {
             display: flex;
-            gap: 20px;
+            gap: 30px;
             flex-grow: 1;
             justify-content: center;
-            align-items: center;
         }
 
         .nav a {
@@ -64,37 +63,38 @@
             text-decoration: none;
             font-size: 14px;
             position: relative;
-            padding: 5px 10px;
+            padding: 10px 15px;
             transition: color 0.3s ease-in-out;
         }
 
-        /* Hover Effect - Change to Span */
+        /* Hover Effect: Make Link Span */
+        .nav a::after {
+            content: "";
+            display: block;
+            height: 2px;
+            background: white;
+            width: 0;
+            transition: width 0.3s ease-in-out;
+        }
+
+        .nav a:hover::after {
+            width: 100%;
+        }
+
         .nav a:hover {
             color: #f0a500;
         }
 
-        .nav a:hover::after {
-            content: attr(data-text);
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: -20px;
-            font-size: 12px;
-            color: #f0a500;
-            text-align: center;
-        }
-
-        /* Login Button */
-        .login-link {
+        /* Log In Button (Extend to the Right) */
+        .login {
             margin-left: auto;
-            background-color: #f0a500;
             padding: 8px 20px;
+            background-color: #f0a500;
             border-radius: 5px;
             transition: background 0.3s ease-in-out;
-            white-space: nowrap;
         }
 
-        .login-link:hover {
+        .login:hover {
             background-color: #d18b00;
         }
 
@@ -110,9 +110,10 @@
                 margin-top: 10px;
             }
 
-            .login-link {
+            .login {
                 width: 100%;
                 text-align: center;
+                margin-left: 0;
             }
         }
     </style>
@@ -120,18 +121,17 @@
 <body>
 
     <!-- Header -->
-   <!-- Header -->
     <div class="header">
         <div class="logo-container">
             <img src="EoA.png" alt="Elite Offshore Academy Logo">
             <span class="logo-text">Elite Offshore Academy</span>
         </div>
         <div class="nav">
-            <a href="#" data-text="Home">Home</a>
-            <a href="#" data-text="Verify Certificate">Verify Certificate</a>
-            <a href="#" data-text="About">About</a>
-            <a href="#" data-text="More">More</a>
-            <a href="#" class="login-link">Log In</a>
+            <a href="#">Home</a>
+            <a href="#">Verify Certificate</a>
+            <a href="#">About</a>
+            <a href="#">More</a>
+            <a href="#" class="login">Log In</a>
         </div>
     </div>
 
